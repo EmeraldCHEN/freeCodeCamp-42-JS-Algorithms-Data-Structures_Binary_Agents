@@ -18,14 +18,13 @@ function binaryAgent2(str) {
     let tempArr = [];
     for(let i = 0; i < arr.length; i++){
         for(let j = arr[i].length-1; j >= 0; j--){
-             temp += arr[i][j]  * Math.pow(2, (arr[i].length-1-j));
+             temp += arr[i][j]  * Math.pow(2, (arr[i].length-1-j)); // Convert the binary number to a decimal number
         }
         tempArr.push(String.fromCharCode(temp));
         temp = 0;
     }
     return tempArr.join('');
 }
-
 
 
 
