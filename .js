@@ -13,12 +13,12 @@ binaryAgent("01001001 00100000 01101100 01101111 01110110 01100101 00100000 0100
 /************  Solution #2    ***************************************************************************************************/
 
 function binaryAgent2(str) {
-    let arr = str.split(' ');  
+    let arr = str.split(' '); // Separate str into an array of strings separated by whitespace
     let temp = 0;
     let tempArr = [];
     for(let i = 0; i < arr.length; i++){
         for(let j = 7; j >= 0; j--){
-             temp += arr[i][j]  * Math.pow(2, (7-j));
+             temp += arr[i][j]  * Math.pow(2, (7-j)); // Convert the binary numbers to decimal numbers 
         }
         tempArr.push(String.fromCharCode(temp));
         temp = 0;
