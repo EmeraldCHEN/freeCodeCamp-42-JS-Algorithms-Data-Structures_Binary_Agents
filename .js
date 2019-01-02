@@ -17,8 +17,8 @@ function binaryAgent2(str) {
     let temp = 0;
     let tempArr = [];
     for(let i = 0; i < arr.length; i++){
-        for(let j = 7; j >= 0; j--){
-             temp += arr[i][j]  * Math.pow(2, (7-j)); // Convert the binary numbers to decimal numbers 
+        for(let j = arr[i].length-1; j >= 0; j--){
+             temp += arr[i][j]  * Math.pow(2, (arr[i].length-1-j));
         }
         tempArr.push(String.fromCharCode(temp));
         temp = 0;
